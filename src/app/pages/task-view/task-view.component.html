@@ -6,11 +6,7 @@
             </h1>
 
             <div class="list-menu">
-                <a class="list-menu-item is-active">
-                    <p>Testing</p>
-                </a>
-
-                <a class="list-menu-item" *ngFor="let list of lists" [routerLink]="['/lists', list._id]">
+                <a class="list-menu-item" *ngFor="let list of lists" [routerLink]="['/lists', list._id]" routerLinkActive="is-active">
                     <p>{{ list.title }}</p>
                 </a>
             </div>
@@ -27,7 +23,7 @@
                 <p>{{ task.title }}</p>
             </div>
             
-            <button class="circle-add-button button is-primary">
+            <button class="circle-add-button button is-primary" routerLink="./new-task">
                 <img src="../../../assets/plus-icon.svg" alt="Plus Icon" />
             </button>
         </div>
